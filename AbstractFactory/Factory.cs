@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AbstractFactory
 {
+    //Abstract Factory -> Concrete Factories via Interface
     public class WoodFactory : IFactory
     {
         public void MakeDoor(int count)
@@ -72,6 +73,25 @@ namespace AbstractFactory
         public void MakeWall(int length, int width)
         {
             Console.WriteLine("{0}x{1} PLUTONIUM wall made!", length, width);
+        }
+    }
+
+    //Abstract Factory -> Concrete Factories via Extending Abstract Class
+    public class IceFactory : AFactory
+    {
+        public override void MakeDoor(int count)
+        {
+            Console.WriteLine("{0} ICE doors made!", count);
+        }
+
+        public override void MakeFloor(int area)
+        {
+            Console.WriteLine("{0} sized ICE floor", area);
+        }
+
+        public override void MakeWall(int length, int width)
+        {
+            Console.WriteLine("{0}x{1} ICE wall made!", length, width);
         }
     }
 }
