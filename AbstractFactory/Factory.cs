@@ -57,4 +57,21 @@ namespace AbstractFactory
             Console.WriteLine("{0}x{1} GLASS wall made!", length, width);
         }
     }
+    public class PlutoniumFactory : IFactory
+    {
+        public void MakeDoor(int count)
+        {
+            Console.WriteLine("{0} PLUTONIUM doors made!", count);
+        }
+
+        public void MakeFloor(int area)
+        {
+            Console.WriteLine("{0} sized PLUTONIUM floor", area);
+        }
+
+        public void MakeWall(int length, int width)
+        {
+            Console.WriteLine("{0}x{1} PLUTONIUM wall made!", length, width);
+        }
+    }
 }
