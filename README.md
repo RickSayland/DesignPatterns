@@ -31,3 +31,5 @@ Here I work out an example of each design pattern listed from the gang of four b
 * Strategy
 * Template
 * Visitor
+
+### And More!
